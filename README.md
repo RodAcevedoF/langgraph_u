@@ -35,11 +35,11 @@ Copy `.env.example` to `.env` and set:
 | `03_state_routing/` | Reducers, limiting messages, routers, the loan agent |
 | `04_rag_memory_obs/` | Calling APIs, persisting memory, embeddings, ChromaDB, LangMem, human-in-the-loop, observability, the KB agent, evaluation |
 
-Notebooks keep their original `L#_demo/exercise/solution/starter_NN` names so lesson type and order stay clear.
+Notebooks are named `demo_NN_topic` / `exercise_NN_topic` (plus a few `*_from_scratch` explorations), and each opens with a descriptive `#` heading.
 
 ## Notes
 
-- **ragas evaluation is disabled** in `04_rag_memory_obs/L4_starter_exercise_02_evaluation.ipynb`. The latest ragas imports `langchain_community.chat_models.vertexai`, a module removed in langchain-community 0.4.x, so `import ragas` crashes on this modern stack. The cell is commented out with details on how to restore it.
+- **ragas evaluation is disabled** in `04_rag_memory_obs/exercise_02_evaluation.ipynb`. The latest ragas imports `langchain_community.chat_models.vertexai`, a module removed in langchain-community 0.4.x, so `import ragas` crashes on this modern stack. The cell is commented out with details on how to restore it.
 - The **KB agent** and **evaluation** notebooks load `compact-guide-to-large-language-models.pdf`, which is **not included** — add it to `04_rag_memory_obs/` to run them.
 - The **observability** notebook expects an MLflow server at `http://127.0.0.1:5000`. Start one from this directory:
   ```bash
